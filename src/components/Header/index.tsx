@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { primaryColor } from "../UI/Variables"
-
 import { Icon } from "../UI"
+
 import ShoppingCart from "../../assets/images/shopping_cart.svg"
 
 const StyledHeader = styled.nav`
@@ -10,14 +10,14 @@ const StyledHeader = styled.nav`
     display: flex;
     height: 10vh;
     justify-content: space-between;
-    padding: 5vw;
+    padding: 3.25em;
 `
 
 const TitleWrapper = styled.div`
     align-items: flex-end;
     display: flex;
     justify-content: center;
-    gap: 0.75em;
+    gap: 0.6em;
 `
 
 const Title = styled.h1`
