@@ -1,4 +1,7 @@
 import { useFetch } from "../../hooks/useFetch";
+import { fontColor, tertiaryColor } from "../UI/Variables"
+import styled from "styled-components"
+import { BuyBtn } from "../BuyBtn";
 
 type Products = {
     id: number;
@@ -9,23 +12,83 @@ type Products = {
     price: number;
 }
 
+const CardsList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    list-style: none;
+    margin: 100px 400px;
+`
+
+const Card = styled.li`
+
+    box-sizing: border-box;
+    background-color: red;
+    border-radius: 0.5em;
+    height: 18.5em;
+    width: 14em;
+
+    .photo {
+        height: 8rem;
+        margin: 1em 3em;
+        width: 8rem;
+    }
+
+    .title-price {
+        align-items: center;
+        display: flex;
+        gap: 0.75em;
+        padding: 0 0.5em;
+    }
+
+    .title {
+        color: ${fontColor};
+        font-size: 16px;
+        font-weight: 400;
+        width: 70%;
+    }
+
+    .price {
+        background: ${tertiaryColor};
+        border-radius: 0.5em;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 0.4em 0.5em;
+        max-height: 1.8em;
+    }
+
+    .description {
+        color: ${fontColor};
+        font-size: 10px;
+        text-align: left;
+        padding: 1em;
+        width: 100%;
+    }
+`
+
 function Product() {
 
     const { data: allProducts, isFetching } = 
         useFetch<Products[]>("/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC")
 
     return (
-        <ul>
+        <CardsList>
             {isFetching && <p>Carregando...</p>}
             {allProducts?.map(prod => {
                 return (
-                    <li key={prod.id}>
-                        <h2>{prod.name}</h2>
-                        <p>{prod.description}</p>
-                    </li>
+                    <Card key={prod.id}>
+                        <img className="photo" src={prod.photo} alt={prod.name} />
+                        <div className="title-price">
+                            <h2 className="title">{prod.name}</h2>
+                            <h4 className="price">R${(Math.floor(prod.price))}</h4>
+                        </div>
+                        <p className="description">{prod.description}</p>
+                        <BuyBtn />
+                    </Card>
                 )
             })}
-        </ul>
+        </CardsList>
     )
 }
 
