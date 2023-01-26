@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
+import { useFetch } from "../../hooks/useFetch";
 
-type Picles = {
+type Products = {
     id: number;
     name: string;
     brand: string;
@@ -12,18 +11,13 @@ type Picles = {
 
 function Product() {
 
-    const [products, setProducts] = useState<Picles[]>([])
-
-    useEffect(() => {
-        axios.get("https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC")
-            .then(response => {
-                setProducts(response.data.products)
-            })
-    }, [])
+    const { data: allProducts, isFetching } = 
+        useFetch<Products[]>("/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC")
 
     return (
         <ul>
-            {products.map(prod => {
+            {isFetching && <p>Carregando...</p>}
+            {allProducts?.map(prod => {
                 return (
                     <li key={prod.id}>
                         <h2>{prod.name}</h2>
