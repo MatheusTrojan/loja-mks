@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import { useState } from "react"
+import { ShopCartModal } from "../ShopCartModal";
 import { primaryColor } from "../UI/Variables"
-import { Icon } from "../UI"
+import { FinishBtn, Icon, TotalPrice } from "../UI"
 
 import ShoppingCart from "../../assets/images/shopping_cart.svg"
 
@@ -40,14 +42,18 @@ const CartBtn = styled.a`
     background-color: #FFFFFF;
     border-radius: 0.5em;
     color: #000000;
+    cursor: pointer;
     display: flex;
-    gap: 0.75em;
     font-weight: 700;
+    gap: 0.75em;
     justify-content: center;
     padding: 0.5em 1em;
 `
 
 export function Header() {
+    
+     const [isModalVisible, setIsModalVisible] = useState(false)
+
     return (
         <StyledHeader>
             <TitleWrapper>
@@ -55,10 +61,22 @@ export function Header() {
                 <Subtitle>Sistemas</Subtitle>
             </TitleWrapper>
 
-            <CartBtn>
+            <CartBtn onClick={() => setIsModalVisible(true)}>
                 <Icon src={ShoppingCart}/>
                 0
             </CartBtn>
+            {isModalVisible ? (
+                <ShopCartModal onClose={() => setIsModalVisible(false)}>
+                    <h2>CARRINHO DE COMPRAS</h2>
+                    <div>CARDS DOS ITENS</div>
+                    <TotalPrice>
+                        <p className="totalText">TOTAL</p>
+                        <p className="totalText">R$500</p>
+                    </TotalPrice>
+                    <FinishBtn>FINALIZAR COMPRA</FinishBtn>
+                </ShopCartModal> 
+                ) : null}
+
         </StyledHeader>
     )
 };
