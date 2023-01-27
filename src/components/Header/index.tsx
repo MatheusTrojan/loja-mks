@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useState } from "react"
 import { ShopCartModal } from "../ShopCartModal";
 import { primaryColor } from "../UI/Variables"
-import { FinishBtn, Icon, TotalPrice } from "../UI"
+import { FinishBtn, Icon, ModalTitle, TotalPrice } from "../UI"
 
 import ShoppingCart from "../../assets/images/shopping_cart.svg"
 
@@ -67,13 +67,13 @@ export function Header() {
             </CartBtn>
             {isModalVisible ? (
                 <ShopCartModal onClose={() => setIsModalVisible(false)}>
-                    <h2>CARRINHO DE COMPRAS</h2>
+                    <ModalTitle>Carrinho <br/>de compras</ModalTitle>
                     <div>CARDS DOS ITENS</div>
                     <TotalPrice>
-                        <p className="totalText">TOTAL</p>
+                        <p className="totalText">Total</p>
                         <p className="totalText">R$500</p>
                     </TotalPrice>
-                    <FinishBtn>FINALIZAR COMPRA</FinishBtn>
+                    <FinishBtn onClick={() => setIsModalVisible(false)}>Finalizar Compra</FinishBtn>
                 </ShopCartModal> 
                 ) : null}
 

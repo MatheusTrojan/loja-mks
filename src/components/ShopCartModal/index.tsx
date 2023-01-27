@@ -30,8 +30,8 @@ const StyledModal = styled.div`
         outline: none;
         cursor: pointer;
         width: 35px;
-        right: calc(-100% + 50px);
-        top: 25px;
+        right: calc(-100% + 55px);
+        top: 40px;
         position: relative;
         ::before,
         ::after {
