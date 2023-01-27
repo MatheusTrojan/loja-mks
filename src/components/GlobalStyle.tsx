@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { secondaryColor } from "./UI/Variables";
 export const GlobalStyle = createGlobalStyle`
 
 * {    
@@ -10,4 +11,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
 }
 
+body {
+    background-color: ${secondaryColor};
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+}
 `;

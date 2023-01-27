@@ -8,12 +8,20 @@ const BuyingBtn = styled.button`
     background: ${primaryColor};
     border: none;
     border-radius: 0 0 8px 8px;
+    cursor: pointer;
     display: flex;
     gap: 0.25em;
     justify-content: center;
     padding: 0.5em;
+    position: absolute;
+    top: calc(100% - 30px);
     max-height: 30px;
+    transition: 0.3s ease-in-out;
     width: 100%;
+
+    :hover {
+      background-color: #1767df;
+    }
 
     img {
         height: 15px;
