@@ -2,7 +2,10 @@ import styled from "styled-components"
 import { useState } from "react"
 import { ShopCartModal } from "../ShopCartModal";
 import { primaryColor } from "../UI/Variables"
-import { FinishBtn, Icon, ModalTitle, TotalPrice } from "../UI"
+import { CartBtn, FinishBtn, Icon, ModalTitle, TotalPrice } from "../UI"
+
+import { getMemoizedNumItems } from "../ShopCartModal/cartSlice"; 
+import { useAppSelector } from "../../hooks/useAppDispatch";
 
 import ShoppingCart from "../../assets/images/shopping_cart.svg"
 
@@ -37,22 +40,14 @@ const Subtitle = styled.h3`
     margin-bottom: 0.25em;
 `
 
-const CartBtn = styled.a`
-    align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 0.5em;
-    color: #000000;
-    cursor: pointer;
-    display: flex;
-    font-weight: 700;
-    gap: 0.75em;
-    justify-content: center;
-    padding: 0.5em 1em;
-`
-
 export function Header() {
+
+    const numItems = useAppSelector(getMemoizedNumItems);
     
-     const [isModalVisible, setIsModalVisible] = useState(false)
+    const [isModalVisible, setIsModalVisible] = useState(false)
+    
+    const products = useAppSelector((state) => state.products.products);
+    const items = useAppSelector((state) => state.cart.items);
 
     return (
         <StyledHeader>
@@ -63,17 +58,29 @@ export function Header() {
 
             <CartBtn onClick={() => setIsModalVisible(true)}>
                 <Icon src={ShoppingCart}/>
-                0
+                <span>{ numItems }</span>
             </CartBtn>
             {isModalVisible ? (
                 <ShopCartModal onClose={() => setIsModalVisible(false)}>
-                    <ModalTitle>Carrinho <br/>de compras</ModalTitle>
-                    <div>CARDS DOS ITENS</div>
-                    <TotalPrice>
-                        <p className="totalText">Total</p>
-                        <p className="totalText">R$500</p>
-                    </TotalPrice>
-                    <FinishBtn onClick={() => setIsModalVisible(false)}>Finalizar Compra</FinishBtn>
+                    <>
+                        <ModalTitle>Carrinho <br/>de compras</ModalTitle>
+
+                        {Object.entries(items).map(([id, quantity]) => (
+                            <div key={id}>
+                                <img src={products[id].photo}/>
+                                <h2>{products[id].name}</h2>
+                                <input type="number" defaultValue={quantity}/>
+                                <p>{products[id].price}</p>
+                            </div>
+                        ))}
+
+                        <TotalPrice>
+                            <p className="totalText">Total</p>
+                            <p className="totalText">R$500</p>
+                        </TotalPrice>
+
+                        <FinishBtn onClick={() => setIsModalVisible(false)}>Finalizar Compra</FinishBtn>
+                    </>
                 </ShopCartModal> 
                 ) : null}
 

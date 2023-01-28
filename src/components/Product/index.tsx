@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
 import { receivedProducts } from "./productsSlice";
+import { addToCart } from "../ShopCartModal/cartSlice";
 import { fontColor, tertiaryColor } from "../UI/Variables";
 import styled from "styled-components";
-import { BuyBtn } from "../BuyBtn";
+import { BuyBtn } from "../UI";
 import { getProducts } from "../../api/api";
+
+import ShoppingBag from "../../assets/images/shopping-bag.svg"
 
 const CardsList = styled.ul`
     flex: 1;
@@ -71,9 +74,8 @@ export default function Product() {
     useEffect(() => {
         getProducts().then((products) => {
             dispatch(receivedProducts(products));
-        })
-    })
-
+        });
+    }, []);
 
     const products = useAppSelector(state => state.products.products)
 
@@ -89,7 +91,10 @@ export default function Product() {
                             <h4 className="price">R${(Math.floor(prod.price))}</h4>
                         </div>
                         <p className="description">{prod.description}</p>
-                        <BuyBtn/>
+                        <BuyBtn onClick={() => dispatch(addToCart(prod.id))}>
+                            <img src={ShoppingBag}/>
+                            <p>COMPRAR</p>
+                        </BuyBtn>
                     </Card>
                 )
             })}
