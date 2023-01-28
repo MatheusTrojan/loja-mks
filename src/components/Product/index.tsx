@@ -1,16 +1,10 @@
-import { useFetch } from "../../hooks/useFetch";
-import { fontColor, tertiaryColor } from "../UI/Variables"
-import styled from "styled-components"
+import { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
+import { receivedProducts } from "./productsSlice";
+import { fontColor, tertiaryColor } from "../UI/Variables";
+import styled from "styled-components";
 import { BuyBtn } from "../BuyBtn";
-
-export type Products = {
-    id: number;
-    name: string;
-    brand: string;
-    description: string;
-    photo: string;
-    price: number;
-}
+import { getProducts } from "../../api/api";
 
 const CardsList = styled.ul`
     flex: 1;
@@ -71,15 +65,22 @@ const Card = styled.li`
     }
 `
 
-function Product() {
+export default function Product() {
 
-    const { data: allProducts, isFetching } = 
-        useFetch<Products[]>("/api/v1/products?page=1&rows=8&sortBy=id&orderBy=ASC")
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        getProducts().then((products) => {
+            dispatch(receivedProducts(products));
+        })
+    })
+
+
+    const products = useAppSelector(state => state.products.products)
 
     return (
         <CardsList>
-            {isFetching && <p>Carregando...</p>}
-            {allProducts?.map(prod => {
+            {/* {isFetching && <p>Carregando...</p>} */}
+            {Object.values(products).map(prod => {
                 return (
                     <Card key={prod.id}>
                         <img className="photo" src={prod.photo} alt={prod.name} />
@@ -95,5 +96,3 @@ function Product() {
         </CardsList>
     )
 }
-
-export default Product
