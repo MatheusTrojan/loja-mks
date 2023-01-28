@@ -25,5 +25,4 @@ export function useFetch<T = unknown>(url: string) {
     }, [])
 
     return { data, isFetching, error }
-
 }

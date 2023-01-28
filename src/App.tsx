@@ -5,12 +5,11 @@ import Product from "./components/Product";
 
 function App() {
 
-
   return (
     <>
       <GlobalStyle />
-      <Header />
 
+      <Header />
       <Product />
 
       <Footer />

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { CloseBtn } from "../UI";
 import { primaryColor } from "../UI/Variables"
 
 const StyledModal = styled.div`
@@ -21,36 +22,6 @@ const StyledModal = styled.div`
         height: 100vh;
         width: 450px;
     }
-
-    .close {
-        background-color: black;
-        border: none;
-        border-radius: 50%;
-        height: 35px;
-        outline: none;
-        cursor: pointer;
-        width: 35px;
-        right: calc(-100% + 55px);
-        top: 40px;
-        position: relative;
-        ::before,
-        ::after {
-            content: " ";
-            position: absolute;
-            top: 25%;
-            left: 48%;
-            width: 1.5px;
-            height: 18px;
-            background-color: white;
-        }
-        :before {
-            transform: rotate(45deg);
-        }
-        :after {
-            transform: rotate(-45deg);
-        }
-
-    }
 `
 
 interface ModalProps {
@@ -68,7 +39,7 @@ export function ShopCartModal({ id = "modal", onClose = () => {}, children }:Mod
     return (
         <StyledModal id={id} onClick={handleOutsideClick}>
             <div className="container">
-                <button className="close" onClick={onClose}/>
+                <CloseBtn onClick={onClose}/>
                 <div className="content">{children}</div>
             </div>
         </StyledModal>

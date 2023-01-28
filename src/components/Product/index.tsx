@@ -3,7 +3,7 @@ import { fontColor, tertiaryColor } from "../UI/Variables"
 import styled from "styled-components"
 import { BuyBtn } from "../BuyBtn";
 
-type Products = {
+export type Products = {
     id: number;
     name: string;
     brand: string;
