@@ -4,6 +4,7 @@ import { ShopCartModal } from "../ShopCartModal";
 import { primaryColor } from "../UI/Variables"
 import { CartBtn, FinishBtn, Icon, ModalTitle, TotalPrice } from "../UI"
 import { ProductOnCart } from "../ProductOnCart"
+import { getTotalPrice } from "../ShopCartModal/cartSlice";
 
 import { getMemoizedNumItems } from "../ShopCartModal/cartSlice"; 
 import { useAppSelector } from "../../hooks/useAppDispatch";
@@ -47,8 +48,7 @@ export function Header() {
     
     const [isModalVisible, setIsModalVisible] = useState(false)
     
-    const products = useAppSelector((state) => state.products.products);
-    const items = useAppSelector((state) => state.cart.items);
+    const totalPrice = useAppSelector(getTotalPrice)
 
     return (
         <StyledHeader>
@@ -70,7 +70,7 @@ export function Header() {
 
                         <TotalPrice>
                             <p className="totalText">Total</p>
-                            <p className="totalText">R$500</p>
+                            <p className="totalText">R${totalPrice}</p>
                         </TotalPrice>
 
                         <FinishBtn onClick={() => setIsModalVisible(false)}>Finalizar Compra</FinishBtn>
