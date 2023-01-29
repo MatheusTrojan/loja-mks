@@ -3,6 +3,7 @@ import { useState } from "react"
 import { ShopCartModal } from "../ShopCartModal";
 import { primaryColor } from "../UI/Variables"
 import { CartBtn, FinishBtn, Icon, ModalTitle, TotalPrice } from "../UI"
+import { ProductOnCart } from "../ProductOnCart"
 
 import { getMemoizedNumItems } from "../ShopCartModal/cartSlice"; 
 import { useAppSelector } from "../../hooks/useAppDispatch";
@@ -65,14 +66,7 @@ export function Header() {
                     <>
                         <ModalTitle>Carrinho <br/>de compras</ModalTitle>
 
-                        {Object.entries(items).map(([id, quantity]) => (
-                            <div key={id}>
-                                <img src={products[id].photo}/>
-                                <h2>{products[id].name}</h2>
-                                <input type="number" defaultValue={quantity}/>
-                                <p>{products[id].price}</p>
-                            </div>
-                        ))}
+                        <ProductOnCart />
 
                         <TotalPrice>
                             <p className="totalText">Total</p>
