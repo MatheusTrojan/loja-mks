@@ -38,20 +38,57 @@ export const CartCard = styled.li`
 
     .cartCard__title {
         color: ${fontColor};
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
         justify-self: left;
     }
 
-    .cartCard__input {
-        justify-self: center;
-        max-height: 20px;
-        max-width: 30px;
+    .cartCard__quantity {
+        align-items: center;
+        grid-column: 3/4;
+        color: ${fontColor};
+        margin: 0 1.5rem 0.5rem 1.5rem;
+    }
+
+    .cartCard__quantity p {
+        font-size: 0.5rem;
+        margin: 0.15rem 0;
+    }
+
+    .cartCard__button--container {
+        align-items: center;
+        border: 0.3px solid #BFBFBF;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        width: 70px;
+    }
+
+    .cartCard__button {
+        background-color: transparent;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 0.4rem 0.5rem;
+        transition: 0.3s ease-in-out;
+
+        :hover {
+            background-color: #bfbfbf24;
+        }
+    }
+
+    .cartCard__quantity--value {
+        color: ${fontColor};
+        border: 0.3px solid #BFBFBF;
+        border-width: 0 0.3px;
+        font-size: 0.8rem;
+        padding: 0 0.35rem;
     }
 
     .cartCard__price {
         color: ${fontColor};
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
     }
 

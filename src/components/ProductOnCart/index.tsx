@@ -11,37 +11,19 @@ export function ProductOnCart() {
     const items = useAppSelector((state) => state.cart.items);
     const dispatch = useAppDispatch()
 
-    function onQuantityChange(
-        e: React.FocusEvent<HTMLInputElement>, 
-        id: string
-    ) {
-        const quantity = Number(e.target.value) || 0;
-        dispatch(updateQuantity({ id, quantity }));
-    }
-
-    function onQuantityChange_2(
-        e: React.ChangeEvent<HTMLInputElement>, 
-        id: string
-    ) {
-        const quantity = Number(e.target.value) || 0;
-        dispatch(updateQuantity({ id, quantity }));
-    }
-
     return (
     <CartCardList>
         {Object.entries(items).map(([id, quantity]) => (
             <CartCard key={id}>
                 <img className="cartCard__image" src={products[id].photo}/>
                 <h2 className="cartCard__title">{products[id].name}</h2>
-                <div>
-                    <button onClick={() => dispatch(subItemQuantity(Number(id)))}>-</button>
-                    <input 
-                        className="cartCard__input" 
-                        defaultValue={quantity}
-                        onBlur={(e) => onQuantityChange(e, id)}
-                        onChange={(e) => onQuantityChange_2(e, id)}
-                    />
-                    <button onClick={() => dispatch(addItemQuantity(Number(id)))}>+</button>
+                <div className="cartCard__quantity">
+                    <p>Qtd:</p>
+                    <div className="cartCard__button--container">
+                        <button className="cartCard__button" onClick={() => dispatch(subItemQuantity(Number(id)))}>-</button>
+                        <span className="cartCard__quantity--value">{quantity}</span>
+                        <button className="cartCard__button" onClick={() => dispatch(addItemQuantity(Number(id)))}>+</button>
+                    </div>
                 </div>
                 <p className="cartCard__price">
                     R${(Math.floor(products[id].price))}
