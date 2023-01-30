@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { useAppSelector } from "../../hooks/useAppDispatch";
-import { IoIosCloseCircle } from "react-icons/Io"
 import { fontColor } from "../UI/Variables"
+import { IoIosCloseCircle } from "react-icons/Io"
+import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
+
+import { removeFromCart } from "../ShopCartModal/cartSlice";
 
 const CartCardList = styled.ul`
     display: flex;
@@ -70,6 +72,7 @@ export function ProductOnCart() {
 
     const products = useAppSelector((state) => state.products.products);
     const items = useAppSelector((state) => state.cart.items);
+    const dispatch = useAppDispatch()
 
     return (
     <CartCardList>
@@ -82,6 +85,7 @@ export function ProductOnCart() {
                 <IoIosCloseCircle 
                     size={25}
                     className="cartCard__delete"
+                    onClick={() => dispatch(removeFromCart(id))} 
                 />
             </CartCard>
         ))}
