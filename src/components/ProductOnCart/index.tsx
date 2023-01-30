@@ -1,6 +1,7 @@
 import { CartCard, CartCardList } from "./styles";
 import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
 import { removeFromCart, updateQuantity } from "../ShopCartModal/cartSlice";
+import 'animate.css';
 
 import { IoIosCloseCircle } from "react-icons/Io"
 

@@ -1,5 +1,6 @@
 import CloseCart from "../../assets/images/close_cart.svg"
 import { StyledModal } from "./styles";
+import 'animate.css';
 interface ModalProps {
     id?: string;
     onClose: () => void;
@@ -13,7 +14,7 @@ export function ShopCartModal({ id = "modal", onClose = () => {}, children }:Mod
     }
 
     return (
-        <StyledModal id={id} onClick={handleOutsideClick}>
+        <StyledModal className="animate__animated animate__fadeInRight" id={id} onClick={handleOutsideClick}>
             <div className="container">
                 <img
                     src={CloseCart}

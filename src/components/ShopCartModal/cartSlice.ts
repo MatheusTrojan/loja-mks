@@ -1,12 +1,15 @@
 import { createSlice, createSelector, PayloadAction } from "@reduxjs/toolkit"
 import { RootState } from "../../store";
 
+type CheckoutState = "LOADING" | "READY" | "ERROR";
 export interface CartState {
-    items: { [productId: string]: number}
+    items: { [productId: string]: number};
+    checkoutState: CheckoutState;
 }
 
 const initialState: CartState = {
-    items: {}
+    items: {},
+    checkoutState: "READY"
 }
 
 const cartSlice = createSlice({
@@ -28,6 +31,11 @@ const cartSlice = createSlice({
             const { id, quantity } = action.payload;
             state.items[id] = quantity
         }
+    },
+    extraReducers: function(builder) {
+        builder.addCase("cart/checkout/pending", (state, action) => {
+            state.checkoutState = "LOADING"
+        })
     }
 })
 
