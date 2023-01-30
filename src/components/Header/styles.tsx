@@ -1,6 +1,36 @@
 import styled from "styled-components";
-import { primaryColor } from "./Variables";
+import { primaryColor } from "../UI/Variables";
 
+export const StyledHeader = styled.nav`
+align-items: center;
+background-color: ${primaryColor};
+display: flex;
+height: 10vh;
+justify-content: space-between;
+padding: 3.25em;
+`
+
+export const TitleWrapper = styled.div`
+align-items: flex-end;
+display: flex;
+justify-content: center;
+gap: 0.6em;
+`
+
+export const Title = styled.h1`
+color: white;
+font-size: 2.5em;
+font-weight: 600;
+line-height: 1.125em;
+`
+
+export const Subtitle = styled.h3`
+color: white;
+font-size: 1.25em;
+font-weight: 300;
+line-height: 1.125em;
+margin-bottom: 0.25em;
+` 
 
 export const Icon = styled.img`
     height: 1.15em;
@@ -18,39 +48,6 @@ export const CartBtn = styled.a`
     gap: 0.75em;
     justify-content: center;
     padding: 0.5em 1em;
-`
-
-export const BuyBtn = styled.a` 
-    align-items: center;
-    background: ${primaryColor};
-    border: none;
-    border-radius: 0 0 8px 8px;
-    cursor: pointer;
-    display: flex;
-    gap: 0.5em;
-    justify-content: center;
-    padding: 0.5em;
-    position: absolute;
-    top: calc(100% - 30px);
-    max-height: 30px;
-    transition: 0.3s ease-in-out;
-    width: 100%;
-
-    :hover {
-      background-color: #1767df;
-    }
-
-    img {
-        height: 15px;
-        margin: 0;
-        width: 15px;
-    }
-
-    p {
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-    }
 `
 
 export const FinishBtn = styled.button`
@@ -82,4 +79,4 @@ export const ModalTitle = styled.h2`
     line-height: 1.25em;
     margin: 1em 1em;
     width: 50%;
-`;
+`; 
