@@ -1,13 +1,13 @@
 import styled from "styled-components"
-import { CloseBtn } from "../UI";
-import { primaryColor } from "../UI/Variables"
-import { useAppSelector } from "../../hooks/useAppDispatch";
+import { primaryColor } from "../UI/Variables";
+
+import CloseCart from "../../assets/images/close_cart.svg"
 
 
 const StyledModal = styled.div`
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
-    height: 80vh;
+    height: 100%;
     justify-content: right;
     left: 0;
     position: fixed;
@@ -22,8 +22,17 @@ const StyledModal = styled.div`
         color: white;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
         width: 450px;
+    }
+
+    .closeBtn {
+        color: black;
+        cursor: pointer;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        z-index: 1;
     }
 `
 interface ModalProps {
@@ -41,7 +50,11 @@ export function ShopCartModal({ id = "modal", onClose = () => {}, children }:Mod
     return (
         <StyledModal id={id} onClick={handleOutsideClick}>
             <div className="container">
-                <CloseBtn onClick={onClose}/>
+                <img
+                    src={CloseCart}
+                    className="closeBtn"
+                    onClick={onClose}
+                />
                 <div className="content">{children}</div>
             </div>
         </StyledModal>
