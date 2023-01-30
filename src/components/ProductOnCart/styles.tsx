@@ -46,7 +46,7 @@ export const CartCard = styled.li`
     .cartCard__input {
         justify-self: center;
         max-height: 20px;
-        max-width: 60px;
+        max-width: 30px;
     }
 
     .cartCard__price {

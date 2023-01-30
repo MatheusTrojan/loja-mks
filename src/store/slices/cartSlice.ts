@@ -1,15 +1,12 @@
 import { createSlice, createSelector, PayloadAction } from "@reduxjs/toolkit"
-import { RootState } from "../../store";
+import { RootState } from "..";
 
-type CheckoutState = "LOADING" | "READY" | "ERROR";
 export interface CartState {
     items: { [productId: string]: number};
-    checkoutState: CheckoutState;
 }
 
 const initialState: CartState = {
-    items: {},
-    checkoutState: "READY"
+    items: {}
 }
 
 const cartSlice = createSlice({
@@ -30,16 +27,23 @@ const cartSlice = createSlice({
         updateQuantity(state, action: PayloadAction<{ id: string, quantity: number }>) {
             const { id, quantity } = action.payload;
             state.items[id] = quantity
+        },
+        addItemQuantity(state, action: PayloadAction<number>) {
+            const id = action.payload;
+            if (state.items[id]) {
+                state.items[id]++;
+            }
+        },
+        subItemQuantity(state, action: PayloadAction<number>) {
+            const id = action.payload;
+            if (state.items[id] > 1) {
+                state.items[id]--;
+            }
         }
-    },
-    extraReducers: function(builder) {
-        builder.addCase("cart/checkout/pending", (state, action) => {
-            state.checkoutState = "LOADING"
-        })
     }
 })
 
-export const { addToCart, removeFromCart, updateQuantity } = cartSlice.actions;
+export const { addToCart, removeFromCart, updateQuantity, addItemQuantity, subItemQuantity } = cartSlice.actions;
 export default cartSlice.reducer;
 
 export function getNumItems(state: RootState) {

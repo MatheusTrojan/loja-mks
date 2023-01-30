@@ -1,6 +1,6 @@
 import { CartCard, CartCardList } from "./styles";
 import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
-import { removeFromCart, updateQuantity } from "../ShopCartModal/cartSlice";
+import { removeFromCart, updateQuantity, addItemQuantity, subItemQuantity } from "../../store/slices/cartSlice";
 import 'animate.css';
 
 import { IoIosCloseCircle } from "react-icons/Io"
@@ -33,13 +33,16 @@ export function ProductOnCart() {
             <CartCard key={id}>
                 <img className="cartCard__image" src={products[id].photo}/>
                 <h2 className="cartCard__title">{products[id].name}</h2>
-                <input 
-                    className="cartCard__input" 
-                    type="number" 
-                    defaultValue={quantity}
-                    onBlur={(e) => onQuantityChange(e, id)}
-                    onChange={(e) => onQuantityChange_2(e, id)}
-                />
+                <div>
+                    <button onClick={() => dispatch(subItemQuantity(Number(id)))}>-</button>
+                    <input 
+                        className="cartCard__input" 
+                        defaultValue={quantity}
+                        onBlur={(e) => onQuantityChange(e, id)}
+                        onChange={(e) => onQuantityChange_2(e, id)}
+                    />
+                    <button onClick={() => dispatch(addItemQuantity(Number(id)))}>+</button>
+                </div>
                 <p className="cartCard__price">
                     R${(Math.floor(products[id].price))}
                 </p>

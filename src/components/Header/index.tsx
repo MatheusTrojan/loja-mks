@@ -4,8 +4,8 @@ import { ShopCartModal } from "../ShopCartModal";
 import { ProductOnCart } from "../ProductOnCart"
 
 import { useAppSelector } from "../../hooks/useAppDispatch";
-import { getMemoizedNumItems } from "../ShopCartModal/cartSlice"; 
-import { getTotalPrice } from "../ShopCartModal/cartSlice";
+import { getMemoizedNumItems } from "../../store/slices/cartSlice"; 
+import { getTotalPrice } from "../../store/slices/cartSlice";
 
 import ShoppingCart from "../../assets/images/shopping_cart.svg"
 import { StyledHeader, Subtitle, Title, TitleWrapper, CartBtn, FinishBtn, Icon, ModalTitle, TotalPrice } from "./styles";

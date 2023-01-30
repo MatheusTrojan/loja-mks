@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { Card, CardsList, BuyBtn } from "./styles";
 import { getProducts } from "../../api/api";
 import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
-import { receivedProducts } from "./productsSlice";
-import { addToCart } from "../ShopCartModal/cartSlice";
+import { receivedProducts } from "../../store/slices/productsSlice";
+import { addToCart } from "../../store/slices/cartSlice";
 
 import ShoppingBag from "../../assets/images/shopping-bag.svg"
 
