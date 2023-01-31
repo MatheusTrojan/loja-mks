@@ -15,7 +15,7 @@ export function ProductOnCart() {
     <CartCardList>
         {Object.entries(items).map(([id, quantity]) => (
             <CartCard key={id}>
-                <img className="cartCard__image" src={products[id].photo}/>
+                <img className="cartCard__image" src={products[id].photo} alt={products[id].name}/>
                 <h2 className="cartCard__title">{products[id].name}</h2>
                 <div className="cartCard__quantity">
                     <p>Qtd:</p>

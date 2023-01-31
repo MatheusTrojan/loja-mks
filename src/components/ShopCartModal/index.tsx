@@ -17,6 +17,7 @@ export function ShopCartModal({ id = "modal", onClose = () => {}, children }:Mod
         <StyledModal className="animate__animated animate__fadeInRight" id={id} onClick={handleOutsideClick}>
             <div className="container">
                 <img
+                    alt="Pressione para fechar o carrinho de compras"
                     src={CloseCart}
                     className="closeBtn"
                     onClick={onClose}

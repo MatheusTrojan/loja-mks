@@ -20,7 +20,6 @@ export default function Product() {
 
     return (
         <CardsList>
-            {/* {isFetching && <p>Carregando...</p>} */}
             {Object.values(products).map(prod => {
                 return (
                     <Card key={prod.id}>

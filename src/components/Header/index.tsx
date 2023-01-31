@@ -28,7 +28,7 @@ export function Header() {
             </TitleWrapper>
 
             <CartBtn onClick={() => setIsModalVisible(true)}>
-                <Icon src={ShoppingCart}/>
+                <Icon src={ShoppingCart} alt="Carrinho de Compras"/>
                 <span>{ numItems }</span>
             </CartBtn>
             {isModalVisible ? (
