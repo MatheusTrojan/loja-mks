@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675191288113" clover="3.2.0">
-  <project timestamp="1675191288113" name="All files">
-    <metrics statements="101" coveredstatements="6" conditionals="12" coveredconditionals="0" methods="38" coveredmethods="2" elements="151" coveredelements="8" complexity="0" loc="101" ncloc="101" packages="12" files="19" classes="19"/>
+<coverage generated="1675194579864" clover="3.2.0">
+  <project timestamp="1675194579865" name="All files">
+    <metrics statements="101" coveredstatements="38" conditionals="12" coveredconditionals="4" methods="38" coveredmethods="13" elements="151" coveredelements="55" complexity="0" loc="101" ncloc="101" packages="12" files="19" classes="19"/>
     <package name="src">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\App.tsx">
@@ -150,41 +150,41 @@
       </file>
     </package>
     <package name="src.store.slices">
-      <metrics statements="38" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="13" coveredmethods="2"/>
+      <metrics statements="38" coveredstatements="38" conditionals="4" coveredconditionals="4" methods="13" coveredmethods="13"/>
       <file name="cartSlice.ts" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\store\slices\cartSlice.ts">
-        <metrics statements="32" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
+        <metrics statements="32" coveredstatements="32" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="7" type="stmt"/>
+        <line num="60" count="5" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="62" count="10" type="stmt"/>
+        <line num="64" count="5" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="7" type="stmt"/>
+        <line num="70" count="7" type="stmt"/>
+        <line num="72" count="7" type="stmt"/>
+        <line num="73" count="7" type="stmt"/>
+        <line num="74" count="10" type="stmt"/>
+        <line num="76" count="7" type="stmt"/>
       </file>
       <file name="productsSlice.ts" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\store\slices\productsSlice.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
