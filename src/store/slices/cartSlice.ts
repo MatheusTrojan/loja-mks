@@ -30,9 +30,8 @@ const cartSlice = createSlice({
         },
         addItemQuantity(state, action: PayloadAction<number>) {
             const id = action.payload;
-            if (state.items[id]) {
-                state.items[id]++;
-            }
+            state.items[id]++;
+
         },
         subItemQuantity(state, action: PayloadAction<number>) {
             const id = action.payload;
