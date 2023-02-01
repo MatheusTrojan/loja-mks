@@ -7,9 +7,9 @@ export default function SkeletonEffect() {
 
     return (
         <SkeletonList>
-            {numberOfCards.map(() => {
+            {numberOfCards.map((i) => {
                 return (
-                    <SkeletonCard>
+                    <SkeletonCard key={i}>
                         <RotatingLines
                             strokeColor="grey"
                             strokeWidth="5"

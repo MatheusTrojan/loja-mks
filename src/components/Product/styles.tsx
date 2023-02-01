@@ -10,7 +10,7 @@ export const CardsList = styled.ul`
     height: 100vh;
     justify-content: center;
     list-style: none;
-    margin: 100px 400px 0px 400px;
+    margin: 75px 400px 0px 400px;
     row-gap: 30px;
 
     @media (max-width: 1200px) {

@@ -21,9 +21,9 @@ export function ShopCartModal({ id = "modal", onClose = () => {}, children }:Mod
 
     const numItems = useAppSelector(getMemoizedNumItems);
     const totalPrice = useAppSelector(getTotalPrice)  
-    // className="animate__animated animate__fadeInDown" 
+
     return (
-        <StyledModal id={id} onClick={handleOutsideClick}>
+        <StyledModal id={id} className="animate__animated animate__fadeInDown"  onClick={handleOutsideClick}>
             <div className="container">
                 <img
                     alt="Pressione para fechar o carrinho de compras"
