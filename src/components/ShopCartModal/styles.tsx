@@ -38,6 +38,8 @@ export const StyledModal = styled.div`
 
     .content {
         height: 90vh;
+        display: flex;
+        flex-direction: column;
     }
 
     @media (max-width: 620px) {
@@ -90,6 +92,10 @@ export const FinishBtn = styled.button`
 
     :hover {
         font-size: 2em;
+    }
+
+    @media (max-width: 620px) {
+        font-size: 1.5em;
     }
 
 `

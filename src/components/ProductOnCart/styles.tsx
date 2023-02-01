@@ -5,7 +5,7 @@ export const CartCardList = styled.ul`
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
 
