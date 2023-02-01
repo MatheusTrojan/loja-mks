@@ -94,6 +94,10 @@ export const FinishBtn = styled.button`
 
     @media (max-width: 620px) {
         font-size: 1.5em;
+
+    :hover {
+        font-size: 1.75em;
+    }
     }
 
 `
