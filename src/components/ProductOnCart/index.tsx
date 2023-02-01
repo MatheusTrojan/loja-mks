@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../hooks/useAppDispatch";
 import { removeFromCart, updateQuantity, addItemQuantity, subItemQuantity } from "../../store/slices/cartSlice";
 import 'animate.css';
 
-import { IoIosCloseCircle } from "react-icons/Io"
+import CloseCart from "../../assets/images/close_cart.svg"
 
 export function ProductOnCart() {
 
@@ -28,8 +28,8 @@ export function ProductOnCart() {
                 <p className="cartCard__price">
                     R${(Math.floor(products[id].price))}
                 </p>
-                <IoIosCloseCircle 
-                    size={25}
+                <img
+                    src={CloseCart}
                     className="cartCard__delete"
                     onClick={() => dispatch(removeFromCart(id))} 
                 />

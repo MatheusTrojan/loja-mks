@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import { fontColor } from "../UI/Variables"
+import { fontColor, tertiaryColor } from "../UI/Variables"
 
 export const CartCardList = styled.ul`
+    align-items: center;
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 60vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 
     ::-webkit-scrollbar {
         width: 5px;
@@ -98,9 +100,102 @@ export const CartCard = styled.li`
         right: -5px;
         top: -5px;
         cursor: pointer; 
+        width: 18px;
 
         :hover {
             transform: scale(1.125);
         }
     }
-`
+
+    @media (max-width: 520px) {
+        grid-template-columns: 90px 90px 75px 75px;
+        width: 330px;
+
+        .cartCard__quantity {
+            align-items: left;
+            margin: 0 0 0.5rem 0;
+            width: 100%;
+        }
+
+        .cartCard__price {
+            margin: 0 5px;
+        }
+    }
+
+    @media (max-width: 470px) {
+        align-items: center;
+        column-gap: 10px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50px 55px 40px 55px;
+        height: 220px;
+        justify-content: center;
+        padding: 0.5rem;
+        margin: 0.5em 1.75em;
+        width: 250px;
+
+    .cartCard__image {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        justify-self: center;
+        padding: 0.5em;
+        width: 7.5rem;
+    }
+
+    .cartCard__title {
+        font-size: 16px;
+        grid-column: 1/3;
+        grid-row: 3/3;
+        justify-self: center;
+    }
+
+    .cartCard__quantity {
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 4/4;
+        margin: 0 1.5rem 0.3rem 1.5rem;
+    }
+
+    .cartCard__quantity p {
+       display: none;
+    }
+
+    .cartCard__button--container {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: white;
+        border: 0.3px solid #dadada89;
+        border-radius: 4px;
+        width: 100px;
+    }
+
+    .cartCard__button {
+        font-size: 22px;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .cartCard__quantity--value {
+        color: black;
+        border: 0.3px solid #dadada89;
+        border-width: 0 0.3px;
+        font-size: 1.2rem;
+        padding: 0 0.8rem;
+    }
+
+    .cartCard__price {
+        justify-self: center;
+        background-color: ${tertiaryColor};
+        border-radius: 0.5em;
+        color: white;
+        padding: 0.6em 0.8em;
+        grid-column: 2/2;
+        grid-row: 4/4;
+        font-size: 15px;
+    }
+
+    .cartCard__delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        filter: invert(1);
+        width: 50px;
+    }
+}`

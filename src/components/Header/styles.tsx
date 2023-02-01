@@ -8,6 +8,11 @@ display: flex;
 height: 10vh;
 justify-content: space-between;
 padding: 3.25em;
+
+@media (max-width: 480px) {
+    height: 7vh;
+    padding: 1.25em 1.5em;
+}
 `
 
 export const TitleWrapper = styled.div`
@@ -54,40 +59,3 @@ export const CartBtn = styled.a`
         background-color: #e2dfdf;
     }
 `
-
-export const FinishBtn = styled.button`
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    font-size: 1.75em;
-    font-weight: 700;
-    height: 100px;
-    position: relative;
-    transition: 0.3s ease-in-out;
-    width: 100%;
-
-    :hover {
-        font-size: 2em;
-    }
-
-`
-
-export const TotalPrice = styled.div`
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 2em;
-
-    .totalText {
-        font-size: 1.6em;
-        font-weight: 700;
-    }
-`;
-
-export const ModalTitle = styled.h2`
-    font-size: 1.7em;
-    font-weight: 700;
-    line-height: 1.25em;
-    margin: 1em 1em;
-    width: 50%;
-`; 

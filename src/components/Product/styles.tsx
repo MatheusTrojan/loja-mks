@@ -5,14 +5,12 @@ export const CardsList = styled.ul`
     align-items: center;
     column-gap: 22px;
     display: grid;
-    flex: 1;
-    flex-wrap: wrap;
     grid-template-columns: repeat(4, 14em);
     grid-template-rows: repeat(2, 18.2em);
     height: 100vh;
     justify-content: center;
     list-style: none;
-    margin: 100px 400px 50px 400px;
+    margin: 100px 400px 0px 400px;
     row-gap: 30px;
 
     @media (max-width: 1200px) {
@@ -28,7 +26,7 @@ export const CardsList = styled.ul`
         grid-template-columns: repeat(3, 12em);
         grid-template-rows: repeat(3, 16.5em);
         height: 100vh;
-        margin: 50px 125px 150px 125px;
+        margin: 50px 125px 100px 125px;
     }
 
     @media (max-width: 620px) {

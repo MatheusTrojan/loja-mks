@@ -17,7 +17,6 @@ export default function SkeletonEffect() {
                             width="96"
                             visible={true}
                         />
-                        <h3>CARREGANDO</h3>
                     </SkeletonCard>
                 )
             })}
