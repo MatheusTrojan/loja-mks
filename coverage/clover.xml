@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675252154689" clover="3.2.0">
-  <project timestamp="1675252154689" name="All files">
-    <metrics statements="108" coveredstatements="38" conditionals="14" coveredconditionals="4" methods="41" coveredmethods="13" elements="163" coveredelements="55" complexity="0" loc="108" ncloc="108" packages="13" files="21" classes="21"/>
+<coverage generated="1675271920475" clover="3.2.0">
+  <project timestamp="1675271920475" name="All files">
+    <metrics statements="111" coveredstatements="38" conditionals="16" coveredconditionals="4" methods="41" coveredmethods="13" elements="168" coveredelements="55" complexity="0" loc="111" ncloc="111" packages="13" files="21" classes="21"/>
     <package name="src">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\App.tsx">
@@ -42,33 +42,26 @@
       </file>
     </package>
     <package name="src.components.Header">
-      <metrics statements="21" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="14" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="index.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\Header\index.tsx">
-        <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="17" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="19" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
       </file>
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\Header\styles.tsx">
-        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Product">
@@ -89,8 +82,8 @@
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\Product\styles.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ProductOnCart">
@@ -109,20 +102,30 @@
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\ProductOnCart\styles.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ShopCartModal">
-      <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="14" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <file name="index.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\ShopCartModal\index.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="16" count="0" type="stmt"/>
+        <metrics statements="10" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
       </file>
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\ShopCartModal\styles.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.SkeletonEffect">
@@ -136,7 +139,7 @@
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\SkeletonEffect\styles.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.UI">

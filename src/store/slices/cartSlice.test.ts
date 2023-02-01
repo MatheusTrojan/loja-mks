@@ -26,17 +26,17 @@ describe("cart reducer", () => {
 
     test("addToCart", () => {
         const initialState = undefined;
-        const action = addToCart("abc");
+        const action = addToCart(123);
         let state = cartReducer(initialState, action)
 
         expect(state).toEqual({ 
-            items: { abc: 1 } 
+            items: { 123: 1 } 
         })
         state = cartReducer(state, action)
         state = cartReducer(state, action)
 
         expect(state).toEqual({ 
-            items: { abc: 3 } 
+            items: { 123: 3 } 
         })
     });
 
@@ -65,31 +65,31 @@ describe("cart reducer", () => {
 
     test("addItemQuantity", () => {
         const initialState: CartState = { 
-            items: { abc: 1, def: 3 } 
+            items: { 123: 1, 456: 3 } 
         };
-        const action = addItemQuantity("abc");
+        const action = addItemQuantity(123);
         const state = cartReducer(initialState, action)
         expect(state).toEqual({
-            items: { abc: 2, def: 3 } 
+            items: { 123: 2, 456: 3 } 
         })
     });
 
     test("subItemQuantity", () => {
         const initialState: CartState = { 
-            items: { abc: 5, def: 1 } 
+            items: { 123: 5, 456: 1 } 
         };
-        let action = subItemQuantity("abc");
+        let action = subItemQuantity(123);
         let state = cartReducer(initialState, action)
 
         expect(state).toEqual({
-            items: { abc: 4, def: 1 } 
+            items: { 123: 4, 456: 1 } 
         })
 
-        action = subItemQuantity("def");
+        action = subItemQuantity(456);
         state = cartReducer(state, action)
 
         expect(state).toEqual({
-            items: { abc: 4, def: 1 } 
+            items: { 123: 4, 456: 1 } 
         })
     });
 })
