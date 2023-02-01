@@ -30,6 +30,7 @@ export function ShopCartModal({ id = "modal", onClose = () => {}, children }:Mod
                     src={CloseCart}
                     className="closeBtn"
                     onClick={onClose}
+                    
                 />
 
                 <div className="content">

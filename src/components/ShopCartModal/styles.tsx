@@ -85,8 +85,6 @@ export const FinishBtn = styled.button`
     font-size: 1.75em;
     font-weight: 700;
     height: 100px;
-    position: relative;
-    top: 0%;
     transition: 0.3s ease-in-out;
     width: 100%;
 
