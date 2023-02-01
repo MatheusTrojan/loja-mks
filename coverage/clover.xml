@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675194579864" clover="3.2.0">
-  <project timestamp="1675194579865" name="All files">
-    <metrics statements="101" coveredstatements="38" conditionals="12" coveredconditionals="4" methods="38" coveredmethods="13" elements="151" coveredelements="55" complexity="0" loc="101" ncloc="101" packages="12" files="19" classes="19"/>
+<coverage generated="1675252154689" clover="3.2.0">
+  <project timestamp="1675252154689" name="All files">
+    <metrics statements="108" coveredstatements="38" conditionals="14" coveredconditionals="4" methods="41" coveredmethods="13" elements="163" coveredelements="55" complexity="0" loc="108" ncloc="108" packages="13" files="21" classes="21"/>
     <package name="src">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\App.tsx">
@@ -72,17 +72,19 @@
       </file>
     </package>
     <package name="src.components.Product">
-      <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
       <file name="index.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\Product\index.tsx">
-        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="12" count="0" type="stmt"/>
+        <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
       </file>
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\Product\styles.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -121,6 +123,20 @@
       <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\ShopCartModal\styles.tsx">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.SkeletonEffect">
+      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\SkeletonEffect\index.tsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+      <file name="styles.tsx" path="C:\Users\mttro\Documents\DEV\Mentoria\desafios\loja-mks\src\components\SkeletonEffect\styles.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.UI">

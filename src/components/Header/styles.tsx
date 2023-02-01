@@ -48,6 +48,11 @@ export const CartBtn = styled.a`
     gap: 0.75em;
     justify-content: center;
     padding: 0.5em 1em;
+    transition: 0.3s ease-in-out;
+
+    :hover {
+        background-color: #e2dfdf;
+    }
 `
 
 export const FinishBtn = styled.button`
@@ -58,8 +63,14 @@ export const FinishBtn = styled.button`
     font-weight: 700;
     height: 100px;
     position: relative;
+    transition: 0.3s ease-in-out;
     width: 100%;
-`;
+
+    :hover {
+        font-size: 2em;
+    }
+
+`
 
 export const TotalPrice = styled.div`
     align-items: center;

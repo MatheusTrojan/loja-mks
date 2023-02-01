@@ -25,11 +25,14 @@ export const StyledModal = styled.div`
     }
 
     .closeBtn {
-        color: black;
         cursor: pointer;
         position: absolute;
         right: 25px;
         top: 25px;
         z-index: 1;
+
+        :hover {
+            transform: scale(1.125);
+        }
     }
 `

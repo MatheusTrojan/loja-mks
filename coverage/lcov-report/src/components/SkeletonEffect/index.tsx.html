@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/ShopCartModal/index.tsx</title>
+    <title>Code coverage report for src/components/SkeletonEffect/index.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,27 +19,27 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/ShopCartModal</a> index.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/SkeletonEffect</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
@@ -89,21 +89,13 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -121,33 +113,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import CloseCart from "../../assets/images/close_cart.svg"
-import { StyledModal } from "./styles";
-import 'animate.css';
-interface ModalProps {
-    id?: string;
-    onClose: () =&gt; void;
-    children?: React.ReactNode
-}
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { RotatingLines } from  'react-loader-spinner'
+import { SkeletonCard, SkeletonList } from './styles';
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >ShopCartModal(</span>{ id = <span class="branch-0 cbranch-no" title="branch not covered" >"modal",</span> onClose = <span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >()</span> =&gt; {},</span> children }:ModalProps) {
+export default function <span class="fstat-no" title="function not covered" >SkeletonEffect(</span>) {
 &nbsp;
-    const handleOutsideClick = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>: any) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        if(e.target.id == id) <span class="cstat-no" title="statement not covered" >onClose();</span></span>
-    }
+    const numberOfCards: any[] = <span class="cstat-no" title="statement not covered" >[1, 2, 3, 4, 5, 6, 7, 8];</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    return (</span>
-        &lt;StyledModal className="animate__animated animate__fadeInRight" id={id} onClick={handleOutsideClick}&gt;
-            &lt;div className="container"&gt;
-                &lt;img
-                    alt="Pressione para fechar o carrinho de compras"
-                    src={CloseCart}
-                    className="closeBtn"
-                    onClick={onClose}
-                /&gt;
-                &lt;div className="content"&gt;{children}&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/StyledModal&gt;
+        &lt;SkeletonList&gt;
+            {numberOfCards.map(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                return (</span>
+                    &lt;SkeletonCard&gt;
+                        &lt;RotatingLines
+                            strokeColor="grey"
+                            strokeWidth="5"
+                            animationDuration="0.75"
+                            width="96"
+                            visible={true}
+                        /&gt;
+                        &lt;h3&gt;CARREGANDO&lt;/h3&gt;
+                    &lt;/SkeletonCard&gt;
+                )
+            })}
+        &lt;/SkeletonList&gt;
     )
 }
 &nbsp;</pre></td></tr></table></pre>

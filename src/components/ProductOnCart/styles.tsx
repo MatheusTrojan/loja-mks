@@ -98,5 +98,9 @@ export const CartCard = styled.li`
         right: -5px;
         top: -5px;
         cursor: pointer; 
+
+        :hover {
+            transform: scale(1.125);
+        }
     }
 `
