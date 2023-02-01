@@ -84,7 +84,7 @@ export const FinishBtn = styled.button`
     cursor: pointer;
     font-size: 1.75em;
     font-weight: 700;
-    height: 100px;
+    height: calc(100vh - 100px);
     transition: 0.3s ease-in-out;
     width: 100%;
 
