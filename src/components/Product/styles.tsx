@@ -2,13 +2,48 @@ import { fontColor, primaryColor, tertiaryColor } from "../UI/Variables";
 import styled from "styled-components";
 
 export const CardsList = styled.ul`
+    align-items: center;
+    column-gap: 22px;
+    display: grid;
     flex: 1;
-    display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    grid-template-columns: repeat(4, 14em);
+    grid-template-rows: repeat(2, 18.2em);
+    height: 100vh;
+    justify-content: center;
     list-style: none;
-    height: 18.2em;
-    margin: 100px 400px;
+    margin: 100px 400px 50px 400px;
+    row-gap: 30px;
+
+    @media (max-width: 1200px) {
+        gap: 16px;
+        grid-template-columns: repeat(4, 12.5em);
+        grid-template-rows: repeat(2, 17em);
+        height: 80vh;
+        margin: 80px 300px 50px 300px;
+    }
+
+    @media (max-width: 840px) {
+        gap: 16px;
+        grid-template-columns: repeat(3, 12em);
+        grid-template-rows: repeat(3, 16.5em);
+        height: 100vh;
+        margin: 50px 125px 150px 125px;
+    }
+
+    @media (max-width: 620px) {
+        gap: 16px;
+        grid-template-columns: repeat(2, 14em);
+        grid-template-rows: repeat(5, 18em);
+        margin: 50px 125px 500px 125px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 32px;
+        grid-template-columns: repeat(1, 15em);
+        grid-template-rows: repeat(10, 19em);
+        margin-bottom: 1950px;
+    }
 `
 
 export const Card = styled.li`
@@ -19,7 +54,7 @@ export const Card = styled.li`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 100%;
     position: relative;
-    width: 14em;
+    width: 100%;
 
     .photo {
         height: 8rem;
@@ -36,7 +71,7 @@ export const Card = styled.li`
 
     .title {
         color: ${fontColor};
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         width: 70%;
     }
@@ -57,6 +92,39 @@ export const Card = styled.li`
         text-align: left;
         padding: 1em;
         width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+        .photo {
+            height: 6rem;
+            margin: 0.7em 25%;
+            width: 6rem;
+        }
+
+        .title {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: 620px) {
+        .photo {
+            height: 7.5rem;
+            margin: 0.7em 25%;
+            width: 7.5rem;
+        }
+
+        .title {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .photo {
+            height: 8.5rem;
+            margin: 0.7em 22%;
+            width: 8.5rem;
+        }
+        
     }
 `
 
@@ -91,4 +159,5 @@ export const BuyBtn = styled.a`
         font-size: 14px;
         font-weight: 600;
     }
+
 `
